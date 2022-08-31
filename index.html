@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="">
+    </header>
+    <main>
+        <section>
+            <textarea class="mensagem" name="" id="" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
+            <div class="botoes">
+                <button onclick="btncriptografar()">Criptografar</button>
+                <button onclick="btpdescriptografar()">Descriptografar</button>
+            </div>
+        </section>
+        <section>
+            <textarea class="mensagem-criptografada" name="" id="" cols="30" rows="10"></textarea>
+            <button class="copiar">Copiar</button>
+        </section>
+
+
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
