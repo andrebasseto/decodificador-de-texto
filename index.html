@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-bt">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador</title>
-
+    <title>Decodificador Alura</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,19 +18,21 @@
     </header>
     <main>
         <section>
-            <textarea class="mensagem" name="" id="" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
+            <textarea class="entrada-texto" name="" id="" cols="30" rows="10"
+                placeholder="Digite o texto aqui"></textarea>
             <div class="botoes">
-                <button onclick="btncriptografar()">Criptografar</button>
-                <button onclick="btpdescriptografar()">Descriptografar</button>
+                <button onclick="criptografar()">Criptografar</button>
+                <button onclick="descriptografar()">Descriptografar</button>
             </div>
         </section>
         <section>
-            <textarea class="mensagem-criptografada" name="" id="" cols="30" rows="10"></textarea>
-            <button class="copiar">Copiar</button>
+            <textarea class="saida-texto" name="" id="" cols="30" rows="10"></textarea>
+            <div class="copiar">
+                <button onclick="copiar()">Copiar</button>
+            </div>
         </section>
-
-
     </main>
+
     <script src="index.js"></script>
 </body>
 

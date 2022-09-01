@@ -1,16 +1,17 @@
-const mensagem = document.querySelector(".mensagem");
-const mensagemFinal = document.querySelector(".mensagem-criptografada");
-const matriz = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]]
+var textoEntrada = document.querySelector(".entrada-texto");
+var textoSaida = document.querySelector(".saida-texto");
+var string = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 
-function btncriptografar() {
-    mensagem.value = mensagemMinuscula(mensagem.value);
-    mensagemFinal.value = encriptar(mensagem.value);
-    mensagemFinal.style.backgroundImage = "none";
+function criptografar() {
+    textoEntrada.value = mensagemMinuscula(textoEntrada.value);
+    textoSaida.value = encriptar(textoEntrada.value);
+    textoSaida.style.backgroundImage = "none";
 }
 
-function btpdescriptografar() {
-    mensagemFinal.value = descriptografar(mensagem.value);
-    mensagemFinal.style.backgroundImage = "none";
+function descriptografar() {
+
+    textoSaida.value = desencriptar(textoEntrada.value);
+    textoSaida.style.backgroundImage = "none";
 }
 
 function mensagemMinuscula(mensagem) {
@@ -18,21 +19,25 @@ function mensagemMinuscula(mensagem) {
 }
 
 function encriptar(mensagem) {
-    for (var i = 0; i < matriz.length; i++) {
-        if (mensagem.includes(matriz[i][0])) {
-            mensagem = mensagem.replaceAll(matriz[i][0], matriz[i][1]);
+    for (i = 0; i < string.length; i++) {
+        if (mensagem.includes(string[i][0])) {
+            mensagem = mensagem.replaceAll(string[i][0], string[i][1]);
         }
     }
     return mensagem;
 }
 
-function descriptografar(mensagem) {
-    for (var i = 0; i < matriz.length; i++) {
-        if (mensagem.includes(matriz[i][1])) {
-            mensagem = mensagem.replaceAll(matriz[i][1], matriz[i][0]);
+function desencriptar(mensagem) {
+    for (i = 0; i < string.length; i++) {
+        if (mensagem.includes(string[i][0])) {
+            mensagem = mensagem.replaceAll(string[i][1], string[i][0]);
         }
     }
     return mensagem;
 }
 
-
+function copiar(){
+    textoSaida.select();
+    document.execCommand('copy');
+    alert("Texto copiado!");
+}
